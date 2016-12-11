@@ -14,6 +14,7 @@
 		0B378C581DFD43F4007826A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B378C571DFD43F4007826A1 /* Assets.xcassets */; };
 		0B378C5B1DFD43F4007826A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B378C591DFD43F4007826A1 /* LaunchScreen.storyboard */; };
 		0B378C671DFD8D7D007826A1 /* AppInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B378C661DFD8D7D007826A1 /* AppInfoTableViewCell.m */; };
+		8259CC0BA9194307861D76E7 /* libPods-CallPrivateApiDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEDFA1C10CE8AA9EBBB3CB0 /* libPods-CallPrivateApiDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,9 @@
 		0B378C5C1DFD43F4007826A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B378C651DFD8D7D007826A1 /* AppInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoTableViewCell.h; sourceTree = "<group>"; };
 		0B378C661DFD8D7D007826A1 /* AppInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoTableViewCell.m; sourceTree = "<group>"; };
+		1080BBCA3A63B07B44A5E664 /* Pods-CallPrivateApiDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallPrivateApiDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CallPrivateApiDemo/Pods-CallPrivateApiDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		571AFA4144679127406C7FDD /* Pods-CallPrivateApiDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallPrivateApiDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CallPrivateApiDemo/Pods-CallPrivateApiDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6CEDFA1C10CE8AA9EBBB3CB0 /* libPods-CallPrivateApiDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CallPrivateApiDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8259CC0BA9194307861D76E7 /* libPods-CallPrivateApiDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				0B378C4A1DFD43F4007826A1 /* CallPrivateApiDemo */,
 				0B378C491DFD43F4007826A1 /* Products */,
+				E01F52C0733B51896E929089 /* Pods */,
+				8FED270E56A2688CAA8599F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +91,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8FED270E56A2688CAA8599F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CEDFA1C10CE8AA9EBBB3CB0 /* libPods-CallPrivateApiDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E01F52C0733B51896E929089 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1080BBCA3A63B07B44A5E664 /* Pods-CallPrivateApiDemo.debug.xcconfig */,
+				571AFA4144679127406C7FDD /* Pods-CallPrivateApiDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B378C5F1DFD43F4007826A1 /* Build configuration list for PBXNativeTarget "CallPrivateApiDemo" */;
 			buildPhases = (
+				5CBC898510F764FE6D0BA8E4 /* [CP] Check Pods Manifest.lock */,
 				0B378C441DFD43F4007826A1 /* Sources */,
 				0B378C451DFD43F4007826A1 /* Frameworks */,
 				0B378C461DFD43F4007826A1 /* Resources */,
+				A47502619441DF847896BEFE /* [CP] Embed Pods Frameworks */,
+				5606099D8EB95D792B9EE56E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,6 +177,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5606099D8EB95D792B9EE56E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CallPrivateApiDemo/Pods-CallPrivateApiDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CBC898510F764FE6D0BA8E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A47502619441DF847896BEFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CallPrivateApiDemo/Pods-CallPrivateApiDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B378C441DFD43F4007826A1 /* Sources */ = {
@@ -277,9 +352,14 @@
 		};
 		0B378C601DFD43F4007826A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1080BBCA3A63B07B44A5E664 /* Pods-CallPrivateApiDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3S23496FQN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CallPrivateApiDemo",
+				);
 				INFOPLIST_FILE = CallPrivateApiDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.henray.demo;
@@ -289,9 +369,14 @@
 		};
 		0B378C611DFD43F4007826A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 571AFA4144679127406C7FDD /* Pods-CallPrivateApiDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3S23496FQN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CallPrivateApiDemo",
+				);
 				INFOPLIST_FILE = CallPrivateApiDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.henray.demo;
@@ -318,6 +403,7 @@
 				0B378C611DFD43F4007826A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

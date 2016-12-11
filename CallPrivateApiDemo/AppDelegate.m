@@ -7,7 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "JPEngine.h"
 
 @implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [JPEngine startEngine];
+    
+    [JPEngine evaluateScript:@"\
+     var workSpace = require('LSApplicationWorkspace').defaultWorkspace();\
+     console.log(workSpace.allApplications());\
+     "];
+    
+    return YES;
+}
 
 @end
