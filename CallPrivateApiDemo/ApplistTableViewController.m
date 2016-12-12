@@ -9,6 +9,7 @@
 #import "ApplistTableViewController.h"
 #import "AppInfoTableViewCell.h"
 #import <dlfcn.h>
+#import "JPEngine.h"
 
 #define kApplicationIdentifier          @"applicationIdentifier"
 #define kBundleVersion                  @"bundleVersion"
@@ -87,7 +88,16 @@ _Pragma("clang diagnostic pop") \
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self openApplicationWithBundleID:self.appList[indexPath.row][kApplicationIdentifier]];
+    //    [JPEngine evaluateScript:@"\
+    //     var keyWindow = require('UIApplication').sharedApplication().keyWindow();\
+    //     console.log(keyWindow.__hierarchyRepresentation());\
+    //     "];
+    
+    [JPEngine evaluateScript:@"\
+     var keyWindow = require('UIApplication').sharedApplication().keyWindow();\
+     console.log(keyWindow.recursiveDescription());\
+     "];
+//    [self openApplicationWithBundleID:self.appList[indexPath.row][kApplicationIdentifier]];
 }
 
 /**

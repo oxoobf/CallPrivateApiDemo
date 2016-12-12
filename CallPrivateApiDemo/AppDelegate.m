@@ -15,10 +15,10 @@
 {
     [JPEngine startEngine];
     
-    [JPEngine evaluateScript:@"\
-     var workSpace = require('LSApplicationWorkspace').defaultWorkspace();\
-     console.log(workSpace.allApplications());\
-     "];
+//    [JPEngine evaluateScript:@"\
+//     var workSpace = require('LSApplicationWorkspace').defaultWorkspace();\
+//     console.log(workSpace.allApplications());\
+//     "];
     
     return YES;
 }
